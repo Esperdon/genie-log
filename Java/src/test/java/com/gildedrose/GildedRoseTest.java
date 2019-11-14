@@ -85,4 +85,21 @@ public class GildedRoseTest {
         app.updateQuality();
         assertEquals(0, app.items[0].quality);
     }
+
+    @Test
+    public void SellIn() {
+        Item[] items = new Item[] {
+                new Item("+5 Dexterity Vest", 10, 20),
+                new Item("Aged Brie", 10, 0),
+                new Item("Elixir of the Mongoose", 10, 7),
+                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20),
+                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+                new Item("Conjured Mana Cake", 10, 6) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        for (int i = 0; i < items.length; i++) {
+            assertEquals(9, app.items[0].sellIn);
+        }
+    }
 }
