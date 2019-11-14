@@ -52,7 +52,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void QualiteInfDe0() {
+    public void SellInInfDe0() {
         Item[] items = new Item[] { new Item("+5 Dexterity Vest", -1, 20),
                                     new Item("Elixir of the Mongoose", -1, 20) };
 
