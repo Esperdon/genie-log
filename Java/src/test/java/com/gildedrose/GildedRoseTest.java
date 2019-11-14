@@ -63,4 +63,12 @@ public class GildedRoseTest {
         }
     }
 
+    @Test
+    public void Conjured() {
+        Item[] items = new Item[] { new Item("Conjured Mana Cake", 3, 6) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(4, app.items[0].quality);
+    }
+
 }
