@@ -24,4 +24,13 @@ public class GildedRoseTest {
         assertEquals(21, app.items[0].quality);
     }
 
+    @Test
+    public void BackstageSellinInf10() {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 9, 10) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(12, app.items[0].quality);
+    }
+
+
 }
