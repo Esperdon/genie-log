@@ -49,8 +49,18 @@ public class GildedRoseTest {
         for (int i = 0; i < items.length; i++) {
             assertTrue(app.items[i].quality < 51);
         }
-
     }
 
+    @Test
+    public void QualiteInfDe0() {
+        Item[] items = new Item[] { new Item("+5 Dexterity Vest", -1, 20),
+                                    new Item("Elixir of the Mongoose", -1, 20) };
+
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        for (int i = 0; i < items.length; i++) {
+            assertEquals(18, app.items[i].quality);
+        }
+    }
 
 }
