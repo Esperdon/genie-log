@@ -102,4 +102,16 @@ public class GildedRoseTest {
             assertEquals(9, app.items[0].sellIn);
         }
     }
+
+    @Test
+    public void QualiteDeProduitsNormal() {
+        Item[] items = new Item[] {
+                new Item("+5 Dexterity Vest", 10, 20),
+                new Item("Elixir of the Mongoose", 5, 20) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        for (int i = 0; i < items.length; i++) {
+            assertEquals(19, app.items[0].quality);
+        }
+    }
 }
