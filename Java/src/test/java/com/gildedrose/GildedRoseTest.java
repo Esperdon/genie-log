@@ -78,5 +78,11 @@ public class GildedRoseTest {
             }
         }
     }
-
+    @Test
+    public void QualiteNonNegative() {
+        Item[] items = new Item[] { new Item("Elixir of the Mongoose", 5, 1) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(0, app.items[0].quality);
+    }
 }
