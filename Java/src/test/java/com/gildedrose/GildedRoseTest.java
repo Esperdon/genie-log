@@ -40,5 +40,14 @@ public class GildedRoseTest {
         assertEquals(13, app.items[0].quality);
     }
 
+    @Test
+    public void QualiteDepasse50() {
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 10, 50) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertTrue(app.items[0].quality < 51);
+    }
+
+
 
 }
