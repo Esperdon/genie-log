@@ -33,7 +33,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void BackstageSellinInf5() {
+    public void BackstageSellinInf6() {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 5, 10) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
