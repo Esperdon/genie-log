@@ -18,10 +18,10 @@ public class GildedRoseTest {
 
     @Test
     public void Backstage() {
-        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20) };
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", 15, 10) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(21, app.items[0].quality);
+        assertEquals(11, app.items[0].quality);
     }
 
     @Test
@@ -53,10 +53,10 @@ public class GildedRoseTest {
 
     @Test
     public void AgedBrie() {
-        Item[] items = new Item[] { new Item("Aged Brie", -1, 49) };
+        Item[] items = new Item[] { new Item("Aged Brie", -1, 48) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(50, app.items[0].quality);
+        assertEquals(49, app.items[0].quality);
     }
 
     @Test
