@@ -52,6 +52,14 @@ public class GildedRoseTest {
     }
 
     @Test
+    public void AgedBrie() {
+        Item[] items = new Item[] { new Item("Aged Brie", -1, 49) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(50, app.items[0].quality);
+    }
+
+    @Test
     public void SellInInfDe0() {
         Item[] items = new Item[] { new Item("+5 Dexterity Vest", -1, 20),
                                     new Item("Elixir of the Mongoose", -1, 20) };
@@ -93,8 +101,6 @@ public class GildedRoseTest {
                 new Item("Aged Brie", 10, 0),
                 new Item("Elixir of the Mongoose", 10, 7),
                 new Item("Backstage passes to a TAFKAL80ETC concert", 10, 20),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
                 new Item("Conjured Mana Cake", 10, 6) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
