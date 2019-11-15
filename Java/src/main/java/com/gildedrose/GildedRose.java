@@ -95,7 +95,7 @@ class GildedRose {
             Tous_Produits_Sans_AgedBrid_Et_Backstage(i);
 
             SellIn_Produits_Sans_Sulfuras(i);
-            
+
             if (Nom_Produit(i).equals("Aged Brie")) { AgidBrie(i);}
 
             if (Nom_Produit(i).equals("Backstage passes to a TAFKAL80ETC concert")) { Backstage(i); }
